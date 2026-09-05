@@ -18,7 +18,7 @@
     <!-- HEADER / NAVIGATION -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <!-- LOGO / NAMA WEBSITE (Bisa diubah oleh siapa saja) -->
+            <!-- LOGO / NAMA WEBSITEMU (Bisa diubah oleh siapa saja) -->
             <a href="#" class="text-2xl font-bold text-blue-600 hover:text-blue-700 smooth-transition">
                 NamaWebsite
             </a>
@@ -29,7 +29,7 @@
                 <a href="#fitur" class="text-gray-600 hover:text-blue-600 font-medium smooth-transition">Fitur</a>
                 <a href="#konten" class="text-gray-600 hover:text-blue-600 font-medium smooth-transition">Artikel</a>
                 <a href="#kontak" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 font-medium smooth-transition shadow-sm">
-                    Hubungi Kami
+                    Hubungi 087767798988
                 </a>
             </nav>
         </div>
@@ -38,18 +38,18 @@
     <main class="flex-grow">
         <!-- HERO SECTION (Bagian Utama Atas) -->
         <section id="beranda" class="max-w-6xl mx-auto px-4 py-16 sm:py-24 text-center">
-            <h1 class="text-4xl sm:text-6xl font-extrabold text-gray-900 tracking-tight mb-6">
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-gray-600 tracking-tight mb-6">
                 Template Website <span class="text-blue-600">Mudah Diisi</span> & Multi-fungsi
             </h1>
             <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
-                Ini adalah kerangka kode standar yang bersih, responsif, dan siap digunakan oleh siapa saja. Anda tinggal mengganti teks, gambar, dan warna sesuai dengan kebutuhan Anda.
+                Ini adalah tampilan website standard dengan kode standar yang bersih, responsif, dan siap digunakan oleh siapa saja. Kamu tinggal mengganti teks, gambar, dan warna sesuai dengan kebutuhan Anda.
             </p>
             <div class="flex justify-center gap-4">
                 <a href="#konten" class="bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 smooth-transition shadow-md">
-                    Mulai Jelajahi
+                    Penasaran
                 </a>
                 <a href="#fitur" class="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 smooth-transition shadow-sm">
-                    Pelajari Fitur
+                    Belajar Fitur
                 </a>
             </div>
         </section>
@@ -166,7 +166,7 @@
     <!-- FOOTER -->
     <footer class="bg-gray-950 text-gray-500 text-sm py-8 border-t border-gray-900">
         <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p>&copy; 2026 NamaWebsite. Hak Cipta Dilindungi.</p>
+            <p>&copy; 2026 by Arjuma 087767798988. Hak Cipta Dilindungi.</p>
             <div class="flex gap-6">
                 <a href="#" class="hover:text-white smooth-transition">Kebijakan Privasi</a>
                 <a href="#" class="hover:text-white smooth-transition">Syarat & Ketentuan</a>
