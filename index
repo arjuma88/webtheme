@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tema Website Standar Mudah Diisi</title>
+  <title>Arjuma 087767798988 Tema Website</title>
   <style>
     /* UTALITAS CSS DASAR UNTUK PENGGANTI TAILWIND OFFLINE */
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -99,11 +99,13 @@
   <!-- 1. HEADER & NAVIGASI UTAMA -->
   <header id="main-header">
     <div class="container header-flex">
-      <a href="#" class="logo">NamaWebsite</a>
+      <a href="#" class="logo">Nama Websitemu</a>
       <nav id="standard-menu">
         <a href="#">Beranda</a>
-        <a href="#">Fitur</a>
-        <a href="#">Blog</a>
+        <a href="#">Tahukah Kamu</a>
+        <a href="#">Project</a>
+        <a href="#">Download</a>
+        <a href="#">Karir</a>
         <a href="#">Kontak</a>
       </nav>
     </div>
@@ -126,8 +128,10 @@
       </div>
       <div class="popup-links">
         <a href="#">Beranda</a>
-        <a href="#">Fitur</a>
-        <a href="#">Blog</a>
+        <a href="#">Tahukah Kamu</a>
+        <a href="#">Project</a>
+        <a href="#">Download</a>
+        <a href="#">Karir</a>
         <a href="#">Kontak</a>
       </div>
     </div>
@@ -136,8 +140,8 @@
   <!-- 4. HERO SECTION -->
   <section class="hero">
     <div class="container">
-      <h1>Template Website Mudah Diisi</h1>
-      <p>Desain siap pakai yang fleksibel and responsif. Siapa pun bisa mengubah isi teks, gambar, dan warna halaman ini dengan sangat mudah.</p>
+      <h1>Tema Website Mudah Diisi</h1>
+      <p>Desain siap pakai yang fleksibel and responsif. Kamu bisa ubah isi teks, gambar, dan warna halaman ini dengan mudah.</p>
       <div class="btn-group">
         <a href="#" class="btn-primary">Mulai Sekarang</a>
         <a href="#" class="btn-secondary">Pelajari Fitur</a>
@@ -148,8 +152,8 @@
   <!-- 5. FEATURES SECTION -->
   <section class="features">
     <div class="container">
-      <h2 class="section-title">Mengapa Memilih Tema Ini?</h2>
-      <p class="section-subtitle">Kelebihan utama struktur kode yang fleksibel untuk segala jenis kebutuhan.</p>
+      <h2 class="section-title">Mengapa memilih Kami?</h2>
+      <p class="section-subtitle">Kelebihan utama Website yang fleksibel untuk segala jenis kebutuhan.</p>
       <div class="grid-3">
         <div class="card-feature">
           <div class="icon-box">📱</div>
@@ -227,7 +231,7 @@
   <!-- 8. FOOTER -->
   <footer>
     <div class="container footer-flex">
-      <div>© 2026 NamaWebsite. Hak Cipta Dilindungi.</div>
+      <div>© 2026 by Arjuma 087767798988. Hak Cipta Dilindungi.</div>
       <div class="footer-links">
         <a href="#">Kebijakan Privasi</a>
         <a href="#">Syarat & Ketentuan</a>
