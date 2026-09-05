@@ -35,7 +35,16 @@
     .popup-links a:hover { color: #dc2626; }
 
     /* 4. HERO SECTION */
-    .hero { background: linear-gradient(to right, #dc2626, #78350f); color: white; padding: 5rem 0; text-align: center; }
+   .hero { 
+  background-image: linear-gradient(rgba(220, 38, 38, 0.85), rgba(120, 53, 15, 0.9)), url('Background-tangan-dunia.jpg'); 
+  background-attachment: fixed; 
+  background-position: center; 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  color: white; 
+  padding: 7rem 0; 
+  text-align: center; 
+}
     .hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; }
     .hero p { font-size: 1.125rem; max-width: 42rem; margin: 0 auto 2.5rem auto; color: #fee2e2; }
     .btn-group { display: flex; justify-content: center; gap: 1rem; }
