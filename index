@@ -1,58 +1,127 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tema Website Standar & Fleksibel</title>
-    <!-- Menggunakan Tailwind CSS via CDN untuk kemudahan kustomisasi tanpa instalasi -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-        /* Animasi transisi halus untuk interaksi user */
-        .smooth-transition {
-            transition: all 0.3s ease;
-        }
-    </style>
+    <!-- HEADER & NAVIGASI -->
+<header id="main-header" class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <!-- Logo / Nama Website -->
+      <div class="flex-shrink-0 flex items-center">
+        <span class="text-xl font-bold text-blue-600">NamaWebsite</span>
+      </div>
+      <!-- Menu Standar (Muncul di Layar Besar saat di Atas) -->
+      <nav id="standard-menu" class="hidden md:flex space-x-8">
+        <a href="#" class="text-gray-600 hover:text-blue-600 font-medium">Beranda</a>
+        <a href="#" class="text-gray-600 hover:text-blue-600 font-medium">Fitur</a>
+        <a href="#" class="text-gray-600 hover:text-blue-600 font-medium">Blog</a>
+        <a href="#" class="text-gray-600 hover:text-blue-600 font-medium">Kontak</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- TOMBOL RODA GIGI FLOATING (Warna Merah & Berputar Otomatis) -->
+<button id="gear-menu-btn" class="hidden fixed top-4 right-4 z-50 bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform group">
+  <!-- Icon Roda Gigi dengan Animasi Berputar Lambat (animate-spin-slow) -->
+  <svg xmlns="http://w3.org" class="h-6 w-6 animate-spin-slow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+  </svg>
+</button>
+
+<!-- PANEL POP-UP MENU (Teks Hover Mengikuti Warna Merah) -->
+<div id="popup-menu" class="hidden fixed inset-0 z-50 bg-gray-900 bg-opacity-50 flex justify-end items-start pt-16 pr-4">
+  <div class="bg-white w-56 rounded-xl shadow-xl p-4 transform transition-all duration-300 ease-in-out scale-95 opacity-0 origin-top-right" id="popup-content">
+    <div class="flex justify-between items-center mb-4 border-b pb-2">
+      <span class="font-bold text-gray-700">Navigasi</span>
+      <button id="close-menu-btn" class="text-gray-400 hover:text-red-600 font-bold transition-colors">✕</button>
+    </div>
+    <div class="flex flex-col space-y-3">
+      <a href="#" class="text-gray-600 hover:text-red-600 py-1 border-b border-gray-50 transition-colors">Beranda</a>
+      <a href="#" class="text-gray-600 hover:text-red-600 py-1 border-b border-gray-50 transition-colors">Fitur</a>
+      <a href="#" class="text-gray-600 hover:text-red-600 py-1 border-b border-gray-50 transition-colors">Blog</a>
+      <a href="#" class="text-gray-600 hover:text-red-600 py-1 transition-colors">Kontak</a>
+    </div>
+  </div>
+</div>
+<style>
+  /* Membuat animasi berputar lambat (20 detik per satu putaran penuh) */
+  .animate-spin-slow {
+    animation: spin 20s linear infinite;
+  }
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+</style>
+
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+<body class="bg-yellow-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
 
-    <!-- HEADER / NAVIGATION -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <!-- LOGO / NAMA WEBSITE (Bisa diubah oleh siapa saja) -->
-            <a href="#" class="text-2xl font-bold text-blue-600 hover:text-blue-700 smooth-transition">
-                Nama Websitemu
-            </a>
-            
-            <!-- NAVIGASI UTAMA -->
-            <nav class="flex items-center gap-6">
-                <a href="#beranda" class="text-gray-600 hover:text-blue-600 font-medium smooth-transition">Beranda</a>
-                <a href="#fitur" class="text-gray-600 hover:text-blue-600 font-medium smooth-transition">Fitur</a>
-                <a href="#konten" class="text-gray-600 hover:text-blue-600 font-medium smooth-transition">Artikel</a>
-                <a href="#kontak" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 font-medium smooth-transition shadow-sm">
-                    Hubungi Kami
-                </a>
-            </nav>
-        </div>
-    </header>
+  <!-- 1. HEADER & NAVIGASI (Sudah Diselaraskan ke Aksen Merah) -->
+<header id="main-header" class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <!-- Logo / Nama Website -->
+      <div class="flex-shrink-0 flex items-center">
+        <span class="text-xl font-bold text-red-600 tracking-wide">NamaWebsite</span>
+      </div>
+      <!-- Menu Standar (Hover Efek Merah) -->
+      <nav id="standard-menu" class="hidden md:flex space-x-8">
+        <a href="#" class="text-gray-600 hover:text-red-600 font-medium transition-colors">Beranda</a>
+        <a href="#" class="text-gray-600 hover:text-red-600 font-medium transition-colors">Fitur</a>
+        <a href="#" class="text-gray-600 hover:text-red-600 font-medium transition-colors">Blog</a>
+        <a href="#" class="text-gray-600 hover:text-red-600 font-medium transition-colors">Kontak</a>
+      </nav>
+    </div>
+  </div>
+</header>
 
-    <main class="flex-grow">
-        <!-- HERO SECTION (Bagian Utama Atas) -->
-        <section id="beranda" class="max-w-6xl mx-auto px-4 py-16 sm:py-24 text-center">
-            <h1 class="text-4xl sm:text-6xl font-extrabold text-gray-900 tracking-tight mb-6">
-                Template Website <span class="text-blue-600">Mudah Diisi</span> & Multi-fungsi
-            </h1>
-            <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
-                Ini adalah kerangka kode standar yang bersih, responsif, dan siap digunakan oleh siapa saja. Anda tinggal mengganti teks, gambar, dan warna sesuai dengan kebutuhan Anda.
-            </p>
-            <div class="flex justify-center gap-4">
-                <a href="#konten" class="bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 smooth-transition shadow-md">
-                    Mulai Jelajahi
-                </a>
-                <a href="#fitur" class="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 smooth-transition shadow-sm">
-                    Pelajari Fitur
-                </a>
-            </div>
-        </section>
+<!-- 2. TOMBOL RODA GIGI FLOATING (Tetap Merah & Berputar Lambat) -->
+<button id="gear-menu-btn" class="hidden fixed top-4 right-4 z-50 bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform group">
+  <svg xmlns="http://w3.org" class="h-6 w-6 animate-spin-slow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+  </svg>
+</button>
+
+<!-- PANEL POP-UP MENU -->
+<div id="popup-menu" class="hidden fixed inset-0 z-50 bg-gray-900 bg-opacity-50 flex justify-end items-start pt-16 pr-4">
+  <div class="bg-white w-56 rounded-xl shadow-xl p-4 transform transition-all duration-300 ease-in-out scale-95 opacity-0 origin-top-right" id="popup-content">
+    <div class="flex justify-between items-center mb-4 border-b pb-2">
+      <span class="font-bold text-gray-700">Navigasi</span>
+      <button id="close-menu-btn" class="text-gray-400 hover:text-red-600 font-bold transition-colors">✕</button>
+    </div>
+    <div class="flex flex-col space-y-3">
+      <a href="#" class="text-gray-600 hover:text-red-600 py-1 border-b border-gray-50 transition-colors">Beranda</a>
+      <a href="#" class="text-gray-600 hover:text-red-600 py-1 border-b border-gray-50 transition-colors">Fitur</a>
+      <a href="#" class="text-gray-600 hover:text-red-600 py-1 border-b border-gray-50 transition-colors">Blog</a>
+      <a href="#" class="text-gray-600 hover:text-red-600 py-1 transition-colors">Kontak</a>
+    </div>
+  </div>
+</div>
+
+<!-- 3. HERO SECTION (Warna Gradasi Diselaraskan ke Merah - Marun Elegan) -->
+<section class="bg-gradient-to-r from-red-600 to-amber-800 text-white py-20 lg:py-32">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
+      Template Website Mudah Diisi
+    </h1>
+    <p class="text-lg sm:text-xl max-w-2xl mx-auto text-red-100 mb-10">
+      Desain siap pakai yang fleksibel dan responsif. Siapa pun bisa mengubah isi teks, gambar, dan warna halaman ini dengan sangat mudah.
+    </p>
+    <div class="flex justify-center space-x-4">
+      <!-- Tombol Utama Putih dengan Hover Teks Merah -->
+      <a href="#" class="bg-white text-red-700 hover:bg-red-50 px-6 py-3 rounded-lg font-semibold shadow transition-all transform hover:-translate-y-0.5">
+        Mulai Sekarang
+      </a>
+      <!-- Tombol Sekunder Transparan Border Merah Terang -->
+      <a href="#" class="border-2 border-red-400 text-white hover:bg-white hover:text-red-700 px-6 py-3 rounded-lg font-semibold transition-all transform hover:-translate-y-0.5">
+        Pelajari Fitur
+      </a>
+    </div>
+  </div>
+</section>
 
         <!-- FEATURES SECTION (Keunggulan / Layanan) -->
         <section id="fitur" class="bg-white py-16 border-t border-b border-gray-100">
@@ -173,6 +242,58 @@
             </div>
         </div>
     </footer>
+
+<script>
+  const header = document.getElementById('main-header');
+  const gearBtn = document.getElementById('gear-menu-btn');
+  const popupMenu = document.getElementById('popup-menu');
+  const popupContent = document.getElementById('popup-content');
+  const closeBtn = document.getElementById('close-menu-btn');
+
+  // 1. Deteksi Scroll Halaman
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 150) { 
+      // Sembunyikan header standar bawaan
+      header.classList.add('-translate-y-full', 'pointer-events-none');
+      header.classList.remove('sticky');
+      // Munculkan tombol roda gigi di pojok kanan atas
+      gearBtn.classList.remove('hidden');
+    } else {
+      // Munculkan kembali header standar saat kembali ke atas
+      header.classList.remove('-translate-y-full', 'pointer-events-none');
+      header.classList.add('sticky');
+      // Sembunyikan tombol roda gigi
+      gearBtn.classList.add('hidden');
+      // Tutup pop-up jika masih terbuka
+      closePopup();
+    }
+  });
+
+  // 2. Fungsi Buka Pop-up
+  gearBtn.addEventListener('click', () => {
+    popupMenu.classList.remove('hidden');
+    setTimeout(() => {
+      popupContent.classList.remove('scale-95', 'opacity-0');
+      popupContent.classList.add('scale-100', 'opacity-100');
+    }, 10);
+  });
+
+  // 3. Fungsi Tutup Pop-up
+  function closePopup() {
+    popupContent.classList.remove('scale-100', 'opacity-100');
+    popupContent.classList.add('scale-95', 'opacity-0');
+    setTimeout(() => {
+      popupMenu.classList.add('hidden');
+    }, 300);
+  }
+
+  closeBtn.addEventListener('click', closePopup);
+  
+  // Tutup jika area luar pop-up di-klik
+  popupMenu.addEventListener('click', (e) => {
+    if (e.target === popupMenu) closePopup();
+  });
+</script>
 
 </body>
 </html>
