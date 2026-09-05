@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema Website Standar & Fleksibel</title>
+    <!-- Menggunakan Tailwind CSS via CDN untuk kemudahan kustomisasi tanpa instalasi -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        /* Animasi transisi halus untuk interaksi user */
+        .smooth-transition {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <!-- LOGO / NAMA WEBSITE (Bisa diubah oleh siapa saja) -->
+            <a href="#" class="text-2xl font-bold text-blue-600 hover:text-blue-700 smooth-transition">
+                NamaWebsite
+            </a>
+            
+            <!-- NAVIGASI UTAMA -->
+            <nav class="flex items-center gap-6">
+                <a href="#beranda" class="text-gray-600 hover:text-blue-600 font-medium smooth-transition">Beranda</a>
+                <a href="#fitur" class="text-gray-600 hover:text-blue-600 font-medium smooth-transition">Fitur</a>
+                <a href="#konten" class="text-gray-600 hover:text-blue-600 font-medium smooth-transition">Artikel</a>
+                <a href="#kontak" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 font-medium smooth-transition shadow-sm">
+                    Hubungi Kami
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- HERO SECTION (Bagian Utama Atas) -->
+        <section id="beranda" class="max-w-6xl mx-auto px-4 py-16 sm:py-24 text-center">
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-gray-900 tracking-tight mb-6">
+                Template Website <span class="text-blue-600">Mudah Diisi</span> & Multi-fungsi
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
+                Ini adalah kerangka kode standar yang bersih, responsif, dan siap digunakan oleh siapa saja. Anda tinggal mengganti teks, gambar, dan warna sesuai dengan kebutuhan Anda.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#konten" class="bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 smooth-transition shadow-md">
+                    Mulai Jelajahi
+                </a>
+                <a href="#fitur" class="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 smooth-transition shadow-sm">
+                    Pelajari Fitur
+                </a>
+            </div>
+        </section>
+
+        <!-- FEATURES SECTION (Keunggulan / Layanan) -->
+        <section id="fitur" class="bg-white py-16 border-t border-b border-gray-100">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Mengapa Memilih Tema Ini?</h2>
+                    <p class="text-gray-500">Kelebihan utama struktur kode yang fleksibel untuk segala jenis kebutuhan.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Kartu Fitur 1 -->
+                    <div class="p-6 bg-gray-50 rounded-xl border border-gray-100 hover:shadow-md smooth-transition">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl mb-4">📱</div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">100% Responsif</h3>
+                        <p class="text-gray-600 leading-relaxed">Tampilan otomatis menyesuaikan dengan sempurna saat dibuka di HP, tablet, maupun laptop.</p>
+                    </div>
+                    <!-- Kartu Fitur 2 -->
+                    <div class="p-6 bg-gray-50 rounded-xl border border-gray-100 hover:shadow-md smooth-transition">
+                        <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center font-bold text-xl mb-4">⚡</div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">Sangat Ringan</h3>
+                        <p class="text-gray-600 leading-relaxed">Tanpa script yang berat, membuat website memuat dalam sekejap mata untuk kenyamanan pengunjung.</p>
+                    </div>
+                    <!-- Kartu Fitur 3 -->
+                    <div class="p-6 bg-gray-50 rounded-xl border border-gray-100 hover:shadow-md smooth-transition">
+                        <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center font-bold text-xl mb-4">✍️</div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">Mudah Diedit</h3>
+                        <p class="text-gray-600 leading-relaxed">Struktur HTML yang rapi dengan penamaan kelas yang jelas, sangat mudah dipahami pemula.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENT SECTION (Blog / Portofolio / Berita) -->
+        <section id="konten" class="max-w-6xl mx-auto px-4 py-16">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-4">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Artikel & Pembaruan Terbaru</h2>
+                    <p class="text-gray-500">Bagikan cerita, produk, atau informasi penting di bagian blog ini.</p>
+                </div>
+                <a href="#" class="text-blue-600 hover:underline font-medium flex items-center gap-1 smooth-transition">
+                    Lihat semua artikel →
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Konten Item 1 -->
+                <article class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md smooth-transition flex flex-col">
+                    <div class="bg-gray-200 h-48 w-full flex items-center justify-center text-gray-400 font-medium">Placeholder Gambar 1</div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">Kategori A</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 hover:text-blue-600 smooth-transition">
+                            <a href="#">Judul Artikel Utama Pertama Anda</a>
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
+                            Ini adalah contoh ringkasan teks artikel yang bisa Anda isi dengan berita, deskripsi produk, atau pengumuman penting perusahaan.
+                        </p>
+                        <div class="mt-auto text-xs text-gray-400">5 September 2026</div>
+                    </div>
+                </article>
+
+                <!-- Konten Item 2 -->
+                <article class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md smooth-transition flex flex-col">
+                    <div class="bg-gray-200 h-48 w-full flex items-center justify-center text-gray-400 font-medium">Placeholder Gambar 2</div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-green-600 uppercase tracking-wider mb-2">Kategori B</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 hover:text-blue-600 smooth-transition">
+                            <a href="#">Cara Mengubah Isi Website Ini</a>
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
+                            Cukup buka file HTML ini menggunakan aplikasi teks editor seperti Notepad atau VS Code, lalu ganti teks di dalam tag HTML-nya.
+                        </p>
+                        <div class="mt-auto text-xs text-gray-400">5 September 2026</div>
+                    </div>
+                </article>
+
+                <!-- Konten Item 3 -->
+                <article class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md smooth-transition flex flex-col">
+                    <div class="bg-gray-200 h-48 w-full flex items-center justify-center text-gray-400 font-medium">Placeholder Gambar 3</div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-purple-600 uppercase tracking-wider mb-2">Kategori C</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 hover:text-blue-600 smooth-transition">
+                            <a href="#">Mengatur Tampilan Warna Dominan</a>
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
+                            Template ini menggunakan utilitas Tailwind CSS. Anda bisa mengganti kode class seperti 'bg-blue-600' menjadi warna lain dengan mudah.
+                        </p>
+                        <div class="mt-auto text-xs text-gray-400">5 September 2026</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTACT & FOOTER SIGNUP SECTION -->
+        <section id="kontak" class="bg-gray-900 text-white py-16">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-4">Tertarik Menggunakan Template Ini?</h2>
+                <p class="text-gray-400 max-w-xl mx-auto mb-8">
+                    Hubungi kami atau daftarkan email Anda untuk mendapatkan pembaruan berkala langsung di kotak masuk Anda.
+                </p>
+                <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Formulir berhasil dikirim (Contoh)!');">
+                    <input type="email" placeholder="Masukkan alamat email Anda" required 
+                        class="bg-gray-800 text-white placeholder-gray-500 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 flex-grow border border-gray-700">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg smooth-transition shadow-sm">
+                        Berlangganan
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-950 text-gray-500 text-sm py-8 border-t border-gray-900">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 NamaWebsite. Hak Cipta Dilindungi.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white smooth-transition">Kebijakan Privasi</a>
+                <a href="#" class="hover:text-white smooth-transition">Syarat & Ketentuan</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
